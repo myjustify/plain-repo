@@ -1,0 +1,39 @@
+
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
+    },
+    "isolatedModules": true,
+    // this aligns with Vue's browser support
+    "target": "esnext",
+    // this enables stricter inference for data properties on `this`
+    "strict": true,
+    // if using webpack 2+ or rollup, to leverage tree shaking:
+    "module": "esnext",
+    "moduleResolution": "node",
+    "allowJs": true,
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["esnext", "dom"],
+    "suppressImplicitAnyIndexErrors":true,
+    "types": ["vite/client" /* ... */]
+  },
+
+  "include": [
+    "tests/**/*.ts",
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts",
+    "build/**/*.ts",
+    "build/**/*.d.ts",
+    "vite.config.ts"
+  ],
+  "exclude": ["node_modules", "tests/server/**/*.ts", "dist", "**/*.js"]
+}

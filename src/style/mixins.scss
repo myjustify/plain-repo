@@ -1,0 +1,40 @@
+@mixin transparentTable($bgColor: transparent) {
+  :deep(.el-table) {
+    --el-bg-color: #{$bgColor};
+    //--el-table-border-color: var(--el-border-color-lighter);
+    --el-table-border-color: #{$bgColor};
+    --el-table-border: 1px solid var(--el-table-border-color);
+    --el-table-text-color: #e5e0e0;
+    --el-table-header-text-color: #e5e0e0;
+    --el-table-row-hover-bg-color: #{$bgColor};
+    --el-table-current-row-bg-color: #{$bgColor};
+    --el-table-header-bg-color: #{$bgColor};
+    --el-table-fixed-box-shadow: var(--el-box-shadow-light);
+    --el-table-bg-color: #{$bgColor};
+    --el-table-tr-bg-color: #{$bgColor};
+    --el-table-expanded-cell-bg-color: #{$bgColor};
+    .cell {
+      color: var(--el-table-text-color);
+    }
+  }
+}
+
+@mixin transparentPagination($bgColor: transparent) {
+  :deep(.el-pagination) {
+    --el-pagination-font-size: 14px;
+    --el-pagination-bg-color: #{$bgColor};
+    --el-pagination-text-color: #e5e0e0;
+    --el-pagination-border-radius: 2px;
+    --el-pagination-button-color: #e5e0e0;
+    --el-pagination-button-width: 32px;
+    --el-pagination-button-height: 32px;
+    --el-pagination-button-disabled-color: var(--el-text-color-placeholder);
+    --el-pagination-button-disabled-bg-color: #{$bgColor};
+    --el-pagination-button-bg-color: #{$bgColor};
+    --el-pagination-hover-color: var(--el-color-primary);
+    --el-pagination-font-size-small: 12px;
+    --el-pagination-button-width-small: 24px;
+    --el-pagination-button-height-small: 24px;
+    --el-pagination-item-gap: 16px;
+  }
+}
