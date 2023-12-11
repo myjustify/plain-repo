@@ -1,13 +1,13 @@
 import { fileURLToPath, URL } from 'node:url'
+
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
 import AutoImport from 'unplugin-auto-import'
 import Components from 'unplugin-vue-components'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
-import Icons from 'unplugin-icons/vite'
-import IconsResolver from 'unplugin-icons/resolver'
 import UnoCSS from 'unocss/vite'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -15,10 +15,7 @@ export default defineConfig({
     vueJsx(),
     AutoImport.vite({
       resolvers: [
-        ElementPlusResolver(),
-        IconsResolver({
-          prefix: 'Icon',
-        }),
+        ElementPlusResolver()
       ],
       // targets to transform
       include: [
@@ -43,16 +40,8 @@ export default defineConfig({
       dirs: ['src/components/'],
       deep: true,
       resolvers: [
-        ElementPlusResolver(),
-        // Auto register icon components
-        // 自动注册图标组件
-        IconsResolver({
-          enabledCollections: ['ep'],
-        }),
-      ],
-    }),
-    Icons({
-      autoInstall: true,
+        ElementPlusResolver()
+      ]
     }),
     UnoCSS()
   ],
@@ -62,7 +51,7 @@ export default defineConfig({
     }
   },
   build: {
-    brotliSize: false,
+    reportCompressedSize: false,
     // 消除打包大小超过500kb警告
     chunkSizeWarningLimit: 2000,
     assetsDir: 'static/assets',

@@ -19,7 +19,10 @@
             class="label"
             :style="{ flexBasis: labelWidth + 'px' }"
           >{{ son.label }}</div>
-          <div class="value" v-html="son.value"></div>
+          <div
+            class="value"
+            v-html="son.value"
+          />
         </div>
       </template>
     </div>

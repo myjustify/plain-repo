@@ -1,39 +1,16 @@
+/* eslint-env node */
+require('@rushstack/eslint-patch/modern-module-resolution')
+
 module.exports = {
-  globals: {
-    defineProps: 'readonly',
-    defineEmits: 'readonly',
-    defineExpose: 'readonly',
-    withDefaults: 'readonly',
-    defineOptions: 'writable'
-  },
-  // 此项是用来告诉eslint找当前配置文件不能往父级查找
   root: true,
-  // 全局环境
-  env: {
-    node: true,
-    browser: true, // browser global variables
-    es2021: true
-  },
-  // 指定如何解析语法。可以为空，但若不为空，只能配该值
-  parser: 'vue-eslint-parser',
-  // 优先级低于parse的语法解析配置
-  parserOptions: {
-    // 指定ESlint的解析器
-    parser: '@typescript-eslint/parser',
-    // 允许使用ES语法
-    ecmaVersion: 2020,
-    // 允许使用import
-    sourceType: 'module',
-    // 允许解析JSX
-    ecmaFeatures: {
-      jsx: true
-    }
-  },
-  extends: [
-    // './.eslintrc-auto-import.json',
+  'extends': [
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended'
   ],
+  parser: 'vue-eslint-parser',
+  parserOptions: {
+    ecmaVersion: 'latest'
+  },
   rules: {
     'vue/no-unused-properties': ['error', {
       'groups': ['props', 'data', 'methods', 'computed'],
@@ -91,4 +68,4 @@ module.exports = {
     "no-trailing-spaces": 2, // 一行结束后面有空格就发出警告
     "object-curly-spacing": [ "error","always" ]
   }
-};
+}

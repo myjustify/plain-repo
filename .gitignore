@@ -7,6 +7,10 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+yarn.lock
+package-lock.json
+pnpm-lock.yaml
+
 node_modules
 .DS_Store
 dist
@@ -26,3 +30,5 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+
+*.tsbuildinfo
