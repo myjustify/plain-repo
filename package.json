@@ -25,7 +25,6 @@
     "@unocss/preset-rem-to-px": "^0.55.2",
     "@vitejs/plugin-vue": "^4.2.3",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
-    "@vue/babel-plugin-jsx": "^1.1.1",
     "eslint": "^8.45.0",
     "eslint-plugin-vue": "^9.15.1",
     "sass": "^1.32.12",
@@ -34,8 +33,7 @@
     "unplugin-auto-import": "^0.16.6",
     "unplugin-icons": "^0.16.5",
     "unplugin-vue-components": "^0.25.1",
-    "vite": "^4.4.6",
-    "vue-global-api": "^0.4.1"
+    "vite": "^4.4.6"
   },
   "volta": {
     "node": "16.18.1",

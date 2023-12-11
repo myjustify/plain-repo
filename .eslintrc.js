@@ -32,14 +32,7 @@ module.exports = {
   extends: [
     // './.eslintrc-auto-import.json',
     'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    // collections
-    'vue-global-api/reactivity',
-    'vue-global-api/lifecycle',
-    'vue-global-api/component',
-    // single apis
-    'vue-global-api/ref',
-    'vue-global-api/toRef',
+    'plugin:@typescript-eslint/recommended'
   ],
   rules: {
     'vue/no-unused-properties': ['error', {
