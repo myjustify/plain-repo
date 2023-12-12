@@ -1,5 +1,7 @@
 # vite-project
-
+```bash
+git clone -b main https://github.com/myjustify/plain-repo.git myrepo && cd myrepo && rm -rf .git
+```
 This template should help get you started developing with Vue 3 in Vite.
 
 ## Recommended IDE Setup
